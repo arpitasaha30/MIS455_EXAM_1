@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products -  food Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1> REAL THAI </h1>
+    </header>
+    <section>
+        <p>Explore our diverse menu! From gourmet burgers to exquisite salads, each dish is crafted with care to bring you a burst of flavor. Choose your favorite and enjoy a meal that’s as fresh as it is tasty</p>
+        
+        <label for="product-select">Choose a product:</label>
+        <select id="product-select" onchange="displayPrice()">
+            <option value="Earrings">ice cream</option>
+            <option value="Rings">biryani</option>
+            <option value="Tikli">Tiki kabab</option>
+            <option value="Baju">polau</option>
+            <option value="Payel">coke</option>
+        </select>
+
+        <p id="price-display">Price: $0.00</p>
+
+        <section class="home-collection">
+        
+        </section>
+    </section>
+
+    <footer>
+        <p>Explore more on <a href="https://www.facebook.com/realthaiskycafe">Facebook</a>.</p>
+    </footer>
+
+    <script>
+       
+        function displayPrice() {
+            const productPrices = {
+                ice-cream: 150,
+                Biryani: 200,
+                Tiki-Kabab: 250,
+                polau: 300,
+                Coke: 100
+            };
+            const selectedProduct = document.getElementById("product-select").value;
+            const priceDisplay = document.getElementById("price-display");
+            priceDisplay.textContent = `Price: $${productPrices[selectedProduct]}`;
+        }
+    </script>
+</body>
+</html>
